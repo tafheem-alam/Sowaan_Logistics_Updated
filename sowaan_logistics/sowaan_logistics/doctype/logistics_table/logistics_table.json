@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-25 11:56:01.914268",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle",
+  "vehicle_description",
+  "driver",
+  "driver_name",
+  "from",
+  "to",
+  "time_in",
+  "time_out",
+  "trip_number",
+  "start_km",
+  "end_km",
+  "distance_covered",
+  "column_break_htnl",
+  "fuel_information_section",
+  "fuel_type",
+  "float_value",
+  "column_break_puyv",
+  "fuel_consumption",
+  "fuel_subtype",
+  "fuel_rate_per_litre",
+  "fuel_consumption_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.custom_vehicle_description",
+   "fieldname": "vehicle_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "driver.full_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Time IN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Time OUT",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trip_number",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trip Number",
+   "options": "\nFirst\nSecond\nThird\nFourth\nFifth\nSixth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_km",
+   "fieldtype": "Float",
+   "label": "Start KM",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_km",
+   "fieldtype": "Float",
+   "label": "End KM",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "distance_covered",
+   "fieldtype": "Float",
+   "label": "Distance Covered Kilometers",
+   "non_negative": 1,
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_htnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fuel_information_section",
+   "fieldtype": "Section Break",
+   "label": "Fuel Information"
+  },
+  {
+   "fetch_from": "vehicle.fuel_type",
+   "fetch_if_empty": 1,
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "\nPetrol\nDiesel",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.custom_per_km_fuel_consumption",
+   "fetch_if_empty": 1,
+   "fieldname": "float_value",
+   "fieldtype": "Float",
+   "label": "Average Fuel Per KM",
+   "precision": "2",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_puyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fuel_consumption",
+   "fieldtype": "Float",
+   "label": "Fuel Consumption Qty",
+   "non_negative": 1,
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.custom_fuel_subtype",
+   "fieldname": "fuel_subtype",
+   "fieldtype": "Data",
+   "label": "Fuel Subtype",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.custom_fuel_rate",
+   "fieldname": "fuel_rate_per_litre",
+   "fieldtype": "Data",
+   "label": "Fuel Rate per Litre",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fuel_consumption_amount",
+   "fieldtype": "Float",
+   "label": "Fuel Consumption Amount",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-02 19:18:58.700989",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Logistics Table",
+ "owner": "ghaith.albarmawi@sowaan.com",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

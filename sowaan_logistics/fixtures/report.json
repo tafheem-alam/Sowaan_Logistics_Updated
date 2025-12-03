@@ -1,0 +1,1043 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"Delivery Trip\",\"status\",\"=\",\"Completed\"]],\"fields\":[[\"name\",\"Delivery Trip\"],[\"docstatus\",\"Delivery Trip\"],[\"delivery_note\",\"Delivery Stop\"],[\"driver_name\",\"Delivery Trip\"],[\"customer\",\"Delivery Stop\"],[\"status\",\"Delivery Trip\"],[\"vehicle\",\"Delivery Trip\"],[\"driver\",\"Delivery Trip\"],[\"departure_time\",\"Delivery Trip\"],[\"distance\",\"Delivery Stop\"]],\"order_by\":\"`tabDelivery Trip`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"Delivery Stop:delivery_note\":120,\"driver_name\":120,\"Delivery Stop:customer\":120,\"status\":120,\"vehicle\":120,\"driver\":120,\"departure_time\":120,\"Delivery Stop:distance\":120},\"group_by\":null}",
+  "letter_head": "Sasco",
+  "modified": "2024-08-27 14:04:48.551217",
+  "module": "Stock",
+  "name": "Delivery Achievement Report",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Delivery Trip",
+  "reference_report": null,
+  "report_name": "Delivery Achievement Report",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Delivery Achievement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Delivery Achievement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "Delivery Achievement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Delivery Achievement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Delivery Achievement Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Self Service"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[],\"fields\":[[\"name\",\"Vehicle\"],[\"make\",\"Vehicle\"],[\"model\",\"Vehicle\"],[\"custom_vehicle_group\",\"Vehicle\"],[\"custom_emirates_registered\",\"Vehicle\"],[\"employee\",\"Vehicle\"],[\"custom_driver_full_name\",\"Vehicle\"],[\"fuel_type\",\"Vehicle\"],[\"custom_registration_expiry_date\",\"Vehicle\"]],\"order_by\":\"`tabVehicle`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"make\":120,\"model\":120,\"custom_vehicle_group\":120,\"custom_emirates_registered\":120,\"employee\":120,\"custom_driver_full_name\":120,\"fuel_type\":120,\"custom_registration_expiry_date\":120},\"group_by\":null}",
+  "letter_head": "Sasco",
+  "modified": "2024-09-30 12:53:22.054024",
+  "module": "Setup",
+  "name": "Vehicle Report",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Vehicle",
+  "reference_report": null,
+  "report_name": "Vehicle Report",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Vehicle Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Vehicle Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Vehicle Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Vehicle Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2021-05-16 22:48:22.767535",
+  "module": "HR",
+  "name": "Vehicle Expenses",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Vehicle",
+  "reference_report": null,
+  "report_name": "Vehicle Expenses",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Vehicle Expenses",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[],\"fields\":[[\"name\",\"Delivery Trip\"],[\"docstatus\",\"Delivery Trip\"],[\"customer\",\"Delivery Stop\"],[\"customer_address\",\"Delivery Stop\"],[\"status\",\"Delivery Trip\"],[\"distance\",\"Delivery Stop\"],[\"vehicle\",\"Delivery Trip\"],[\"driver_name\",\"Delivery Trip\"],[\"departure_time\",\"Delivery Trip\"]],\"order_by\":\"`tabDelivery Trip`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"Delivery Stop:customer\":141,\"Delivery Stop:customer_address\":306,\"status\":120,\"Delivery Stop:distance\":120,\"vehicle\":120,\"driver_name\":120,\"departure_time\":120},\"group_by\":null}",
+  "letter_head": "Sasco Letter Head",
+  "modified": "2024-08-27 13:57:45.484675",
+  "module": "Stock",
+  "name": "Delivery Trip Report",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Delivery Trip",
+  "reference_report": null,
+  "report_name": "Delivery Trip Report",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Delivery Trip Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Delivery Trip Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "Delivery Trip Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Delivery Trip Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Delivery Trip Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Self Service"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "vehicle",
+    "fieldtype": "Link",
+    "label": "Vehicle",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "driver",
+    "fieldtype": "Link",
+    "label": "Driver",
+    "mandatory": 0,
+    "options": "Driver",
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2025-11-27 21:23:36.998940",
+  "module": "Sowaan Logistics",
+  "name": "Vehicle Expense Report for Cars",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Logistic Car",
+  "reference_report": null,
+  "report_name": "Vehicle Expense Report for Cars",
+  "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n     \"driver\": filters.get(\"driver\")\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    lt.vehicle AS 'Vehicle',\r\n    lt.driver AS 'Driver',\r\n    DATE(lt.time_in) AS 'Trip Date',\r\n    FORMAT(lt.distance_covered, 2) AS 'Distance Covered',\r\n    FORMAT(lt.fuel_consumption, 2) AS 'Fuel Consumption Qty'\r\nFROM \r\n    `tabLogistics Table` lt\r\nINNER JOIN \r\n    `tabLogistic Car` lb ON lb.name = lt.parent\r\nWHERE \r\n    lb.docstatus = 1\r\n    and (Date(lt.time_in) BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (lb.company = %(company)s OR %(company)s IS NULL)\r\n    AND (lt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n     AND (lt.driver = %(driver)s OR %(driver)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Trip Date\", \"label\": \"Trip Date\", \"fieldtype\": \"Date\"},  # Assuming you want just the date\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n]\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Vehicle Expense Report for Cars",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2018-02-21 01:28:47.049042",
+  "module": "Stock",
+  "name": "Delivery Note Trends",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Delivery Note",
+  "reference_report": null,
+  "report_name": "Delivery Note Trends",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Delivery Note Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Delivery Note Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Delivery Note Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Delivery Note Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "vehicle",
+    "fieldtype": "Link",
+    "label": "Vehicle",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "driver",
+    "fieldtype": "Link",
+    "label": "Driver",
+    "mandatory": 0,
+    "options": "Driver",
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-10-02 18:01:59.455477",
+  "module": "Logistics",
+  "name": "Vehicle Expense Report for Buses",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Logistics Buses",
+  "reference_report": null,
+  "report_name": "Vehicle Expense Report for Buses",
+  "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n     \"driver\": filters.get(\"driver\")\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    lt.vehicle AS 'Vehicle',\r\n    lt.driver AS 'Driver',\r\n    DATE(lt.time_in) AS 'Trip Date',\r\n    FORMAT(lt.distance_covered, 2) AS 'Distance Covered',\r\n    FORMAT(lt.fuel_consumption, 2) AS 'Fuel Consumption Qty'\r\nFROM \r\n    `tabLogistics Table` lt\r\nINNER JOIN \r\n    `tabLogistics Buses` lb ON lb.name = lt.parent\r\nWHERE \r\n    lb.docstatus = 1\r\n    and (Date(lt.time_in) BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (lb.company = %(company)s OR %(company)s IS NULL)\r\n    AND (lt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n     AND (lt.driver = %(driver)s OR %(driver)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Trip Date\", \"label\": \"Trip Date\", \"fieldtype\": \"Date\"},  # Assuming you want just the date\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n]\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Vehicle Expense Report for Buses",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "vehicle",
+    "fieldtype": "Link",
+    "label": "Vehicle",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "driver",
+    "fieldtype": "Link",
+    "label": "Driver",
+    "mandatory": 0,
+    "options": "Driver",
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-10-02 18:00:28.189947",
+  "module": "Stock",
+  "name": "Vehicle Expenses for Delivery Trip",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Delivery Trip",
+  "reference_report": null,
+  "report_name": "Vehicle Expenses for Delivery Trip",
+  "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n     \"driver\": filters.get(\"driver\")\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\" \r\nSELECT \r\n    dt.vehicle AS 'Vehicle',\r\n    dt.driver AS 'Driver',\r\n    DATE(dt.departure_time) AS 'Trip Date',\r\n    FORMAT(ds.distance, 2) AS 'Distance Covered',\r\n    FORMAT(ds.custom_total_value, 2) AS 'Fuel Consumption Qty'\r\nFROM \r\n    `tabDelivery Stop` ds\r\nINNER JOIN \r\n    `tabDelivery Trip` dt ON dt.name = ds.parent\r\nWHERE \r\n    ds.docstatus = 1\r\n    AND (Date(dt.departure_time) BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (dt.company = %(company)s OR %(company)s IS NULL)\r\n    AND (dt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n    AND (dt.driver = %(driver)s OR %(driver)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Trip Date\", \"label\": \"Trip Date\", \"fieldtype\": \"Date\"},  # Assuming you want just the date\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n]\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Self Service"
+   },
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Vehicle Expenses for Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "From",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "project",
+    "fieldtype": "Link",
+    "label": "Project",
+    "mandatory": 0,
+    "options": "Project",
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "delivery_trip",
+    "fieldtype": "Link",
+    "label": "Delivery Trip",
+    "mandatory": 0,
+    "options": "Delivery Trip",
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "delivery_note",
+    "fieldtype": "Link",
+    "label": "Delivery Note",
+    "mandatory": 0,
+    "options": "Delivery Note",
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Delivery Trip",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-10-02 17:49:23.477898",
+  "module": "Stock",
+  "name": "Delivery Trip",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Delivery Trip",
+  "reference_report": null,
+  "report_name": "Delivery Trip",
+  "report_script": "values = {\n    \"from_date\": filters.get(\"from_date\"),\n    \"to_date\": filters.get(\"to_date\"),\n    \"project\": filters.get(\"project\"),\n    \"delivery_trip\": filters.get(\"delivery_trip\"),\n    \"delivery_note\": filters.get(\"delivery_note\"),\n    \"company\": filters.get(\"company\"),\n}\n\nresults = frappe.db.sql(\"\"\"\nSELECT \n    dt.custom_posting_date AS 'Posting Date',\n    dt.name AS 'Delivery Trip',\n    dt.driver_name AS 'Driver Name',\n    dt.vehicle AS 'Vehicle',\n    dt.company AS 'Company',\n    dn.project AS 'Project',  \n    ds.delivery_note AS '#DO NO.',\n    ad.city AS 'Area',\n    ds.distance AS 'Distance',\n    ds.uom AS 'UOM',\n    ds.custom_fuel_type as 'Fuel Type',\n    ds.custom_fuel_value AS 'Fuel rate Per KM',\n    ds.custom_total_value AS 'Fuel Consumption Qty',\n    ds.custom_rate as 'Average Fuel per KM',\n     ds.custom_fuel_subtype as 'Fuel Subtype',\n     ds.custom_fuel_consumption as 'Fuel Consumption Amount'\nFROM \n    `tabDelivery Trip` dt\nJOIN \n    `tabDelivery Stop` ds ON ds.parent = dt.name\n    AND ds.parenttype = 'Delivery Trip'\n \nJOIN `tabDelivery Note` dn ON dn.name = ds.delivery_note\n\nJOIN `tabDynamic Link` dl ON ds.customer = dl.link_name\n      AND dl.parenttype = 'Address'\n      \nJOIN `tabAddress` ad ON ad.name = dl.parent\n\n \nWHERE \n    dt.docstatus = 1  \n    AND (dt.custom_posting_date BETWEEN %(from_date)s AND %(to_date)s OR %(from_date)s IS NULL OR %(to_date)s IS NULL)\n    AND (dn.project = %(project)s OR %(project)s IS NULL)\n    AND (dt.name = %(delivery_trip)s OR %(delivery_trip)s IS NULL)\n    AND (ds.delivery_note = %(delivery_note)s OR %(delivery_note)s IS NULL)\n    AND (dt.company = %(company)s OR %(company)s IS NULL)\nORDER BY \n    dt.name\n\"\"\", values, as_dict=True)\n\n# Define columns for the report\ncolumns = [\n    {\"fieldname\": \"Posting Date\", \"label\": \"Posting Date\", \"fieldtype\": \"Date\"},\n    {\"fieldname\": \"Delivery Trip\", \"label\": \"Delivery Trip\", \"fieldtype\": \"Link\", \"options\": \"Delivery Trip\"},\n    {\"fieldname\": \"Driver Name\", \"label\": \"Driver Name\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Company\", \"label\": \"Company\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Project\", \"label\": \"Project\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"#DO NO.\", \"label\": \"#DO NO.\", \"fieldtype\": \"Link\", \"options\": \"Delivery Note\"},\n    {\"fieldname\": \"Area\", \"label\": \"Area\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Distance\", \"label\": \"Distance\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"UOM\", \"label\": \"UOM\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel Type\", \"label\": \"Fuel Type\", \"fieldtype\": \"Data\"},\n      {\"fieldname\": \"Fuel Subtype\", \"label\": \"Fuel Subtype\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel rate Per KM\", \"label\": \"Fuel rate Per KM\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Data\"},\n        {\"fieldname\": \"Average Fuel per KM\", \"label\": \"Average Fuel per KM\", \"fieldtype\": \"Data\"},\n  \n    {\"fieldname\": \"Fuel Consumption Amount\", \"label\": \"Fuel Consumption Amount\", \"fieldtype\": \"Data\"}\n]\n\n# Return the data\ndata = columns, results",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fulfillment User"
+   },
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Self Service"
+   },
+   {
+    "parent": "Delivery Trip",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2017-11-06 13:04:36.338268",
+  "module": "Accounts",
+  "name": "Delivered Items To Be Billed",
+  "prepared_report": 0,
+  "query": "select\n    `tabDelivery Note`.`name` as \"Delivery Note:Link/Delivery Note:120\",\n\t`tabDelivery Note`.`customer` as \"Customer:Link/Customer:120\",\n\t`tabDelivery Note`.`customer_name` as \"Customer Name::150\",\n\t`tabDelivery Note`.`posting_date` as \"Date:Date\",\n\t`tabDelivery Note`.`project` as \"Project\",\n\t`tabDelivery Note Item`.`item_code` as \"Item:Link/Item:120\",\n\t(`tabDelivery Note Item`.`base_amount` - `tabDelivery Note Item`.`billed_amt`*ifnull(`tabDelivery Note`.conversion_rate, 1)) as \"Pending Amount:Currency:110\",\n\t`tabDelivery Note Item`.`item_name` as \"Item Name::150\",\n\t`tabDelivery Note Item`.`description` as \"Description::200\",\n\t`tabDelivery Note`.`company` as \"Company:Link/Company:\"\nfrom `tabDelivery Note`, `tabDelivery Note Item`\nwhere  \n    `tabDelivery Note`.name = `tabDelivery Note Item`.parent \n    and `tabDelivery Note`.docstatus = 1 \n    and `tabDelivery Note`.`status` not in (\"Stopped\", \"Closed\") \n    and `tabDelivery Note Item`.amount > 0\n    and `tabDelivery Note Item`.billed_amt < `tabDelivery Note Item`.amount\norder by `tabDelivery Note`.`name` desc",
+  "ref_doctype": "Sales Invoice",
+  "reference_report": null,
+  "report_name": "Delivered Items To Be Billed",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Delivered Items To Be Billed",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Delivered Items To Be Billed",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From ",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Logistics Buses Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "Today",
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Logistics Buses Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "SASCO Industries",
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Logistics Buses Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "vehicle",
+    "fieldtype": "Link",
+    "label": "Vehicle",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Logistics Buses Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-10-04 10:36:24.441067",
+  "module": "Selling",
+  "name": "Logistics Buses Report",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Logistics Buses",
+  "reference_report": null,
+  "report_name": "Logistics Buses Report",
+  "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    lt.vehicle AS 'Vehicle',\r\n    lt.vehicle_description as 'Vehicle Description',\r\n    lt.driver AS 'Driver',\r\n    lt.driver_name as 'Driver Name',\r\n    lt.from AS 'From',\r\n    lt.to AS 'To',\r\n    lt.time_in AS 'Time In',\r\n    lt.time_out AS 'Time Out',\r\n    lt.trip_number AS 'Trip Number',\r\n    FORMAT(lt.start_km, 2) AS 'Start KM',\r\n    FORMAT(lt.end_km, 2) AS 'End KM',\r\n    FORMAT(lt.distance_covered, 2) AS 'Distance Covered',\r\n    lt.fuel_type AS 'Fuel Type',\r\n    FORMAT(lt.fuel_subtype, 2) AS 'Fuel Subtype',\r\n    FORMAT(lt.float_value, 2) AS 'Average Rate Per KM',\r\n    FORMAT(lt.fuel_consumption, 2) AS 'Fuel Consumption Qty',\r\n    FORMAT(lt.fuel_rate_per_litre, 2) AS 'Fuel Rate Per Litre',\r\n    FORMAT(lt.fuel_consumption_amount, 2) AS 'Fuel Consumption Amount'\r\nFROM \r\n    `tabLogistics Table` lt\r\nINNER JOIN \r\n    `tabLogistics Buses` lb ON lb.name = lt.parent\r\nWHERE \r\n   lb.docstatus = 1\r\n    and (lb.date BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (lb.company = %(company)s OR %(company)s IS NULL)\r\n    AND (lt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Vehicle Description\", \"label\": \"Vehicle Description\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Driver Name\", \"label\": \"Driver Name\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"From\", \"label\": \"From\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"To\", \"label\": \"To\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"Time In\", \"label\": \"Time In\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Time Out\", \"label\": \"Time Out\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Trip Number\", \"label\": \"Trip Number\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Start KM\", \"label\": \"Start KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"End KM\", \"label\": \"End KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Type\", \"label\": \"Fuel Type\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Fuel Subtype\", \"label\": \"Fuel Subtype\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Average Rate Per KM\", \"label\": \"Average Rate Per KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Rate Per Litre\", \"label\": \"Fuel Rate Per Litre\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Consumption Amount\", \"label\": \"Fuel Consumption Amount\", \"fieldtype\": \"Float\"},\r\n]\r\n\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Logistics Buses Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Logistics Buses Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Logistics Buses Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   },
+   {
+    "parent": "Logistics Buses Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Logistic User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From ",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Logistics Car Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "Today",
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Logistics Car Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": "SASCO Industries",
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "mandatory": 0,
+    "options": "Company",
+    "parent": "Logistics Car Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "vehicle",
+    "fieldtype": "Link",
+    "label": "Vehicle",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Logistics Car Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-10-02 17:20:36.407402",
+  "module": "Selling",
+  "name": "Logistics Car Report",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Logistic Car",
+  "reference_report": null,
+  "report_name": "Logistics Car Report",
+  "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    lt.vehicle AS 'Vehicle',\r\n    lt.vehicle_description as 'Vehicle Description',\r\n    lt.driver AS 'Driver',\r\n    lt.driver_name as 'Driver Name',\r\n    lt.from AS 'From',\r\n    lt.to AS 'To',\r\n    lt.time_in AS 'Time In',\r\n    lt.time_out AS 'Time Out',\r\n    lt.trip_number AS 'Trip Number',\r\n    FORMAT(lt.start_km, 2) AS 'Start KM',\r\n    FORMAT(lt.end_km, 2) AS 'End KM',\r\n    FORMAT(lt.distance_covered, 2) AS 'Distance Covered',\r\n    lt.fuel_type AS 'Fuel Type',\r\n    FORMAT(lt.fuel_subtype, 2) AS 'Fuel Subtype',\r\n    FORMAT(lt.float_value, 2) AS 'Average Rate Per KM',\r\n    FORMAT(lt.fuel_consumption, 2) AS 'Fuel Consumption Qty',\r\n    FORMAT(lt.fuel_rate_per_litre, 2) AS 'Fuel Rate Per Litre',\r\n    FORMAT(lt.fuel_consumption_amount, 2) AS 'Fuel Consumption Amount'\r\nFROM \r\n    `tabLogistics Table` lt\r\nINNER JOIN \r\n    `tabLogistic Car` lb ON lb.name = lt.parent\r\nWHERE \r\nlb.docstatus = 1\r\n    and (lb.date BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (lb.company = %(company)s OR %(company)s IS NULL)\r\n    AND (lt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Vehicle Description\", \"label\": \"Vehicle Description\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Driver Name\", \"label\": \"Driver Name\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"From\", \"label\": \"From\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"To\", \"label\": \"To\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"Time In\", \"label\": \"Time In\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Time Out\", \"label\": \"Time Out\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Trip Number\", \"label\": \"Trip Number\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Start KM\", \"label\": \"Start KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"End KM\", \"label\": \"End KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Type\", \"label\": \"Fuel Type\", \"fieldtype\": \"Data\"},\r\n     {\"fieldname\": \"Fuel Subtype\", \"label\": \"Fuel Subtype\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Average Rate Per KM\", \"label\": \"Average Rate Per KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Rate Per Litre\", \"label\": \"Fuel Rate Per Litre\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Consumption Amount\", \"label\": \"Fuel Consumption Amount\", \"fieldtype\": \"Float\"},\r\n]\r\n\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Logistics Car Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery User"
+   },
+   {
+    "parent": "Logistics Car Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Logistics Car Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Delivery Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from",
+    "fieldtype": "Date",
+    "label": "From",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Vehicle Log Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to",
+    "fieldtype": "Date",
+    "label": "To",
+    "mandatory": 0,
+    "options": null,
+    "parent": "Vehicle Log Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "driver",
+    "fieldtype": "Link",
+    "label": "Driver",
+    "mandatory": 0,
+    "options": "Employee",
+    "parent": "Vehicle Log Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "plate_number",
+    "fieldtype": "Link",
+    "label": "License Plate Number",
+    "mandatory": 0,
+    "options": "Vehicle",
+    "parent": "Vehicle Log Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Sasco",
+  "modified": "2024-09-26 18:01:46.535252",
+  "module": "HR",
+  "name": "Vehicle Log Report",
+  "prepared_report": 0,
+  "query": "",
+  "ref_doctype": "Vehicle Log",
+  "reference_report": null,
+  "report_name": "Vehicle Log Report",
+  "report_script": "values = {\r\n    'from': filters.get(\"from\"),\r\n    'to': filters.get(\"to\"),\r\n    'driver': filters.get(\"driver\"),\r\n    'plate_number': filters.get(\"plate_number\")\r\n    \r\n}\r\n\r\n\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    vl.custom_company AS 'Company',\r\n    vl.custom_workshop AS 'Work Shop',\r\n    CONCAT(vl.make, ' ', vl.model) AS 'Vehicle Details',\r\n    vl.license_plate AS 'Plate No',\r\n    vl.name AS 'Job Card No',\r\n    vl.custom_posting_date AS 'Date',\r\n    service_item.service_item AS 'Job Item',\r\n    service_item.type AS 'Job Type',\r\n    FORMAT(service_item.expense_amount, 2) AS 'Expense Amount',\r\n    service_item.custom_full_name AS 'Full Name',\r\n    vl.custom_date_of_parts_received AS 'Date of Parts Recieved',\r\n    vl.custom_date_of_receiving_back_from_workshop AS 'Date of Receiving Back from Workshop',\r\n    service_item.custom_warrantee AS 'Warranty',\r\n    service_item.custom_expiry_date AS 'Expiry Date',\r\n    service_item.custom_last_purchase_date AS 'Last Purchase Date',\r\n    service_item.custom_expected_date_of_change AS 'Expected Date of Change'\r\nFROM \r\n    `tabVehicle Log` vl\r\nJOIN \r\n    `tabVehicle Service` service_item ON service_item.parent = vl.name\r\n    AND service_item.parenttype = 'Vehicle Log'\r\nWHERE \r\n    vl.docstatus = 1  -- Only fetch submitted records\r\n    AND (vl.custom_posting_date BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (vl.license_plate = %(plate_number)s OR %(plate_number)s IS NULL)\r\n    AND (service_item.custom_technician_name = %(driver)s OR %(driver)s IS NULL)\r\nORDER BY \r\n    vl.name\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Company\", \"label\": \"Company\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Work Shop\", \"label\": \"Work Shop\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Vehicle Details\", \"label\": \"Vehicle Details\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Plate No\", \"label\": \"Plate No\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Job Card No\", \"label\": \"Job Card No\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Date\", \"label\": \"Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Job Item\", \"label\": \"Job Item\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Job Type\", \"label\": \"Job Type\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Expense Amount\", \"label\": \"Expense Amount\", \"fieldtype\": \"Currency\"},\r\n    {\"fieldname\": \"Full Name\", \"label\": \"Full Name\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Date of Parts Recieved\", \"label\": \"Date of Parts Recieved\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Date of Receiving Back from Workshop\", \"label\": \"Date of Receiving Back from Workshop\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Warranty\", \"label\": \"Warranty\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Expiry Date\", \"label\": \"Expiry Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Last Purchase Date\", \"label\": \"Last Purchase Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Expected Date of Change\", \"label\": \"Expected Date of Change\", \"fieldtype\": \"Date\"}\r\n]\r\n\r\n# Return the data\r\ndata = columns, results\r\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Vehicle Log Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Vehicle Log Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Self Service"
+   }
+  ],
+  "timeout": 0
+ }
+]

@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Cars-.MM.-.####",
+ "creation": "2024-09-26 13:58:15.760931",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_trnw",
+  "amended_from",
+  "section_break_hmsi",
+  "date",
+  "column_break_bnwl",
+  "company",
+  "section_break_yivj",
+  "table_vgam",
+  "section_break_mfgh",
+  "total_distance_covered",
+  "column_break_klsm",
+  "total_fuel_consumption",
+  "total_fuel_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_trnw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Logistic Car",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_hmsi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_bnwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_yivj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_vgam",
+   "fieldtype": "Table",
+   "options": "Logistics Table"
+  },
+  {
+   "fieldname": "section_break_mfgh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_distance_covered",
+   "fieldtype": "Float",
+   "label": "Total Distance Covered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_klsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_fuel_consumption",
+   "fieldtype": "Float",
+   "label": "Total Fuel Consumption",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fuel_qty",
+   "fieldtype": "Float",
+   "label": "Total_Fuel_Qty",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-02 18:42:02.303073",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Logistic Car",
+ "naming_rule": "Expression (old style)",
+ "owner": "ghaith.albarmawi@sowaan.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

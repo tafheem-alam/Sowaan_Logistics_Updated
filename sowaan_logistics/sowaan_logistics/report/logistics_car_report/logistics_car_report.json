@@ -1,0 +1,38 @@
+{
+ "add_total_row": 1,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2024-09-26 14:05:56.937451",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  
+ ],
+ "idx": 17,
+ "is_standard": "Yes",
+ "letter_head": "Sasco",
+ "letterhead": null,
+ "modified": "2025-12-02 19:55:50.691367",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Logistics Car Report",
+ "owner": "ghaith.albarmawi@sowaan.com",
+ "prepared_report": 0,
+ "ref_doctype": "Logistic Car",
+ "report_name": "Logistics Car Report",
+ "report_script": "# Filter values from the report parameters\r\nvalues = {\r\n    \"from\": filters.get(\"from\"),\r\n    \"to\": filters.get(\"to\"),\r\n    \"company\": filters.get(\"company\"),\r\n    \"vehicle\": filters.get(\"vehicle\"),\r\n}\r\n\r\n# SQL Query to fetch data with decimal formatting\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    lt.vehicle AS 'Vehicle',\r\n    lt.vehicle_description as 'Vehicle Description',\r\n    lt.driver AS 'Driver',\r\n    lt.driver_name as 'Driver Name',\r\n    lt.from AS 'From',\r\n    lt.to AS 'To',\r\n    lt.time_in AS 'Time In',\r\n    lt.time_out AS 'Time Out',\r\n    lt.trip_number AS 'Trip Number',\r\n    FORMAT(lt.start_km, 2) AS 'Start KM',\r\n    FORMAT(lt.end_km, 2) AS 'End KM',\r\n    FORMAT(lt.distance_covered, 2) AS 'Distance Covered',\r\n    lt.fuel_type AS 'Fuel Type',\r\n    FORMAT(lt.fuel_subtype, 2) AS 'Fuel Subtype',\r\n    FORMAT(lt.float_value, 2) AS 'Average Rate Per KM',\r\n    FORMAT(lt.fuel_consumption, 2) AS 'Fuel Consumption Qty',\r\n    FORMAT(lt.fuel_rate_per_litre, 2) AS 'Fuel Rate Per Litre',\r\n    FORMAT(lt.fuel_consumption_amount, 2) AS 'Fuel Consumption Amount'\r\nFROM \r\n    `tabLogistics Table` lt\r\nINNER JOIN \r\n    `tabLogistic Car` lb ON lb.name = lt.parent\r\nWHERE \r\nlb.docstatus = 1\r\n    and (lb.date BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (lb.company = %(company)s OR %(company)s IS NULL)\r\n    AND (lt.vehicle = %(vehicle)s OR %(vehicle)s IS NULL)\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Link\", \"options\": \"Vehicle\"},\r\n    {\"fieldname\": \"Vehicle Description\", \"label\": \"Vehicle Description\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Driver\", \"label\": \"Driver\", \"fieldtype\": \"Link\", \"options\": \"Driver\"},\r\n    {\"fieldname\": \"Driver Name\", \"label\": \"Driver Name\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"From\", \"label\": \"From\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"To\", \"label\": \"To\", \"fieldtype\": \"Link\", \"options\": \"Address\"},\r\n    {\"fieldname\": \"Time In\", \"label\": \"Time In\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Time Out\", \"label\": \"Time Out\", \"fieldtype\": \"Datetime\"},\r\n    {\"fieldname\": \"Trip Number\", \"label\": \"Trip Number\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Start KM\", \"label\": \"Start KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"End KM\", \"label\": \"End KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Distance Covered\", \"label\": \"Distance Covered\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Type\", \"label\": \"Fuel Type\", \"fieldtype\": \"Data\"},\r\n     {\"fieldname\": \"Fuel Subtype\", \"label\": \"Fuel Subtype\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Average Rate Per KM\", \"label\": \"Average Rate Per KM\", \"fieldtype\": \"Float\"},\r\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Rate Per Litre\", \"label\": \"Fuel Rate Per Litre\", \"fieldtype\": \"Float\"},\r\n     {\"fieldname\": \"Fuel Consumption Amount\", \"label\": \"Fuel Consumption Amount\", \"fieldtype\": \"Float\"},\r\n]\r\n\r\n# Return the data\r\ndata = columns, results\r\n",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Delivery User"
+  },
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Delivery Manager"
+  }
+ ],
+ "timeout": 0
+}

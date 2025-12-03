@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Buses-.MM.-.#####",
+ "creation": "2024-09-25 11:54:25.060178",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_0sbl",
+  "amended_from",
+  "section_break_bwdd",
+  "date",
+  "column_break_qkik",
+  "company",
+  "section_break_tyce",
+  "logistics_table",
+  "section_break_qmxx",
+  "column_break_sozl",
+  "total_distance_covered",
+  "column_break_ocsw",
+  "total_fuel_consumption",
+  "total_fuel_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_0sbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Logistics Buses",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_bwdd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_qkik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_tyce",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "logistics_table",
+   "fieldtype": "Table",
+   "label": "Logistics Table",
+   "options": "Logistics Table"
+  },
+  {
+   "fieldname": "section_break_qmxx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sozl",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_distance_covered",
+   "fieldtype": "Float",
+   "label": "Total Distance Covered ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ocsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_fuel_consumption",
+   "fieldtype": "Float",
+   "label": "Total Fuel Consumption Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fuel_qty",
+   "fieldtype": "Float",
+   "label": "Total Fuel Qty",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-02 18:43:29.064644",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Logistics Buses",
+ "naming_rule": "Expression (old style)",
+ "owner": "ghaith.albarmawi@sowaan.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

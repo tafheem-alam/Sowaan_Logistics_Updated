@@ -1,0 +1,42 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2024-08-27 13:56:52.251708",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[[\"Delivery Trip\",\"status\",\"=\",\"Completed\"]],\"fields\":[[\"name\",\"Delivery Trip\"],[\"docstatus\",\"Delivery Trip\"],[\"delivery_note\",\"Delivery Stop\"],[\"driver_name\",\"Delivery Trip\"],[\"customer\",\"Delivery Stop\"],[\"status\",\"Delivery Trip\"],[\"vehicle\",\"Delivery Trip\"],[\"driver\",\"Delivery Trip\"],[\"departure_time\",\"Delivery Trip\"],[\"distance\",\"Delivery Stop\"]],\"order_by\":\"`tabDelivery Trip`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"Delivery Stop:delivery_note\":120,\"driver_name\":120,\"Delivery Stop:customer\":120,\"status\":120,\"vehicle\":120,\"driver\":120,\"departure_time\":120,\"Delivery Stop:distance\":120},\"group_by\":null}",
+ "letter_head": "Sasco",
+ "letterhead": null,
+ "modified": "2025-12-02 19:58:32.723711",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Delivery Achievement Report",
+ "owner": "abdullah.ahmed@sowaan.com",
+ "prepared_report": 0,
+ "ref_doctype": "Delivery Trip",
+ "report_name": "Delivery Achievement Report",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "Delivery Manager"
+  },
+  {
+   "role": "Fulfillment User"
+  },
+  {
+   "role": "Delivery User"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ],
+ "timeout": 0
+}

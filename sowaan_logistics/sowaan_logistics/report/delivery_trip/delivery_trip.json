@@ -1,0 +1,92 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2024-09-25 10:44:42.784240",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "mandatory": 0,
+   "options": "Project",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "delivery_trip",
+   "fieldtype": "Link",
+   "label": "Delivery Trip",
+   "mandatory": 0,
+   "options": "Delivery Trip",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Delivery Note",
+   "mandatory": 0,
+   "options": "Delivery Note",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "mandatory": 0,
+   "options": "Company",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 9,
+ "is_standard": "Yes",
+ "letter_head": "Sasco",
+ "letterhead": null,
+ "modified": "2025-12-02 19:58:11.252932",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Delivery Trip",
+ "owner": "safi.ullah@ahwaal.com",
+ "prepared_report": 0,
+ "ref_doctype": "Delivery Trip",
+ "report_name": "Delivery Trip",
+ "report_script": "values = {\n    \"from_date\": filters.get(\"from_date\"),\n    \"to_date\": filters.get(\"to_date\"),\n    \"project\": filters.get(\"project\"),\n    \"delivery_trip\": filters.get(\"delivery_trip\"),\n    \"delivery_note\": filters.get(\"delivery_note\"),\n    \"company\": filters.get(\"company\"),\n}\n\nresults = frappe.db.sql(\"\"\"\nSELECT \n    dt.custom_posting_date AS 'Posting Date',\n    dt.name AS 'Delivery Trip',\n    dt.driver_name AS 'Driver Name',\n    dt.vehicle AS 'Vehicle',\n    dt.company AS 'Company',\n    dn.project AS 'Project',  \n    ds.delivery_note AS '#DO NO.',\n    ad.city AS 'Area',\n    ds.distance AS 'Distance',\n    ds.uom AS 'UOM',\n    ds.custom_fuel_type as 'Fuel Type',\n    ds.custom_fuel_value AS 'Fuel rate Per KM',\n    ds.custom_total_value AS 'Fuel Consumption Qty',\n    ds.custom_rate as 'Average Fuel per KM',\n     ds.custom_fuel_subtype as 'Fuel Subtype',\n     ds.custom_fuel_consumption as 'Fuel Consumption Amount'\nFROM \n    `tabDelivery Trip` dt\nJOIN \n    `tabDelivery Stop` ds ON ds.parent = dt.name\n    AND ds.parenttype = 'Delivery Trip'\n \nJOIN `tabDelivery Note` dn ON dn.name = ds.delivery_note\n\nJOIN `tabDynamic Link` dl ON ds.customer = dl.link_name\n      AND dl.parenttype = 'Address'\n      \nJOIN `tabAddress` ad ON ad.name = dl.parent\n\n \nWHERE \n    dt.docstatus = 1  \n    AND (dt.custom_posting_date BETWEEN %(from_date)s AND %(to_date)s OR %(from_date)s IS NULL OR %(to_date)s IS NULL)\n    AND (dn.project = %(project)s OR %(project)s IS NULL)\n    AND (dt.name = %(delivery_trip)s OR %(delivery_trip)s IS NULL)\n    AND (ds.delivery_note = %(delivery_note)s OR %(delivery_note)s IS NULL)\n    AND (dt.company = %(company)s OR %(company)s IS NULL)\nORDER BY \n    dt.name\n\"\"\", values, as_dict=True)\n\n# Define columns for the report\ncolumns = [\n    {\"fieldname\": \"Posting Date\", \"label\": \"Posting Date\", \"fieldtype\": \"Date\"},\n    {\"fieldname\": \"Delivery Trip\", \"label\": \"Delivery Trip\", \"fieldtype\": \"Link\", \"options\": \"Delivery Trip\"},\n    {\"fieldname\": \"Driver Name\", \"label\": \"Driver Name\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Vehicle\", \"label\": \"Vehicle\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Company\", \"label\": \"Company\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Project\", \"label\": \"Project\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"#DO NO.\", \"label\": \"#DO NO.\", \"fieldtype\": \"Link\", \"options\": \"Delivery Note\"},\n    {\"fieldname\": \"Area\", \"label\": \"Area\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Distance\", \"label\": \"Distance\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"UOM\", \"label\": \"UOM\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel Type\", \"label\": \"Fuel Type\", \"fieldtype\": \"Data\"},\n      {\"fieldname\": \"Fuel Subtype\", \"label\": \"Fuel Subtype\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel rate Per KM\", \"label\": \"Fuel rate Per KM\", \"fieldtype\": \"Data\"},\n    {\"fieldname\": \"Fuel Consumption Qty\", \"label\": \"Fuel Consumption Qty\", \"fieldtype\": \"Data\"},\n        {\"fieldname\": \"Average Fuel per KM\", \"label\": \"Average Fuel per KM\", \"fieldtype\": \"Data\"},\n  \n    {\"fieldname\": \"Fuel Consumption Amount\", \"label\": \"Fuel Consumption Amount\", \"fieldtype\": \"Data\"}\n]\n\n# Return the data\ndata = columns, results",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Delivery Manager"
+  },
+  {
+   "role": "Fulfillment User"
+  },
+  {
+   "role": "Delivery User"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Logistic User"
+  }
+ ],
+ "timeout": 0
+}

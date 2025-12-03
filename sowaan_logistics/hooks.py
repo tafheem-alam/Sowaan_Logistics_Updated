@@ -21,6 +21,62 @@ app_license = "mit"
 # 	}
 # ]
 
+fixtures = [
+    {"doctype": "Custom Field"},
+    {"doctype": "Client Script"},
+    {"doctype": "Server Script"},
+    {"doctype": "Property Setter"},
+    {"doctype": "Report Reference Doctype"},
+    # Export Reports for these doctypes
+    {
+    "doctype": "Report",
+    "filters": [
+        #["is_standard", "=", "No"],        # get only custom or modified reports
+        ["name", "in", [
+            "Vehicle Expenses for Delivery Trip",
+            "Delivery Achievement Report",
+            "Delivery Note Trends",
+            "Delivery Trip Report",
+            "Delivered Items To Be Billed",
+            "Logistics Buses Report",
+            "Logistics Car Report",            
+            "Vehicle Expense Report for Buses",
+            "Vehicle",
+            "Vehicle Report",
+            "Vehicle Log Report",
+            "Vehicle Expenses",
+            "Driver",
+            "Gate Pass",
+            "Logistics Buses",
+            "Logistic Car",
+            "Logistics Table",
+            "Delivery Stops on Gate Pass",
+            "Delivery Trip",
+            "Delivery Note",
+            "Vehicle Expense Report for Cars",
+            "Vehicle Expense Report for Buses",
+            ""
+        ]]
+        ]
+    },   
+
+    # Workspace and its items/shortcuts
+    {
+        "doctype": "Workspace",
+        "filters": [
+            ["module", "=", "Sowaan Logistics"]
+        ]
+    }
+    
+
+    # Export all Workspace shortcuts/layouts if needed (optional)
+    # "Workspace"
+
+]
+
+
+
+
 # Includes in <head>
 # ------------------
 

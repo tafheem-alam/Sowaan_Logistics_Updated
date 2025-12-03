@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2024-09-24 13:51:23.474892",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  
+ ],
+ "idx": 19,
+ "is_standard": "Yes",
+ "letter_head": "Sasco",
+ "letterhead": null,
+ "modified": "2025-12-02 19:54:34.134794",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Vehicle Log Report",
+ "owner": "safi.ullah@ahwaal.com",
+ "prepared_report": 0,
+ "query": "",
+ "ref_doctype": "Vehicle Log",
+ "report_name": "Vehicle Log Report",
+ "report_script": "values = {\r\n    'from': filters.get(\"from\"),\r\n    'to': filters.get(\"to\"),\r\n    'driver': filters.get(\"driver\"),\r\n    'plate_number': filters.get(\"plate_number\")\r\n    \r\n}\r\n\r\n\r\nresults = frappe.db.sql(\"\"\"\r\nSELECT \r\n    vl.custom_company AS 'Company',\r\n    vl.custom_workshop AS 'Work Shop',\r\n    CONCAT(vl.make, ' ', vl.model) AS 'Vehicle Details',\r\n    vl.license_plate AS 'Plate No',\r\n    vl.name AS 'Job Card No',\r\n    vl.custom_posting_date AS 'Date',\r\n    service_item.service_item AS 'Job Item',\r\n    service_item.type AS 'Job Type',\r\n    FORMAT(service_item.expense_amount, 2) AS 'Expense Amount',\r\n    service_item.custom_full_name AS 'Full Name',\r\n    vl.custom_date_of_parts_received AS 'Date of Parts Recieved',\r\n    vl.custom_date_of_receiving_back_from_workshop AS 'Date of Receiving Back from Workshop',\r\n    service_item.custom_warrantee AS 'Warranty',\r\n    service_item.custom_expiry_date AS 'Expiry Date',\r\n    service_item.custom_last_purchase_date AS 'Last Purchase Date',\r\n    service_item.custom_expected_date_of_change AS 'Expected Date of Change'\r\nFROM \r\n    `tabVehicle Log` vl\r\nJOIN \r\n    `tabVehicle Service` service_item ON service_item.parent = vl.name\r\n    AND service_item.parenttype = 'Vehicle Log'\r\nWHERE \r\n    vl.docstatus = 1  -- Only fetch submitted records\r\n    AND (vl.custom_posting_date BETWEEN %(from)s AND %(to)s OR %(from)s IS NULL OR %(to)s IS NULL)\r\n    AND (vl.license_plate = %(plate_number)s OR %(plate_number)s IS NULL)\r\n    AND (service_item.custom_technician_name = %(driver)s OR %(driver)s IS NULL)\r\nORDER BY \r\n    vl.name\r\n\"\"\", values, as_dict=True)\r\n\r\n# Define columns for the report\r\ncolumns = [\r\n    {\"fieldname\": \"Company\", \"label\": \"Company\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Work Shop\", \"label\": \"Work Shop\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Vehicle Details\", \"label\": \"Vehicle Details\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Plate No\", \"label\": \"Plate No\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Job Card No\", \"label\": \"Job Card No\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Date\", \"label\": \"Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Job Item\", \"label\": \"Job Item\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Job Type\", \"label\": \"Job Type\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Expense Amount\", \"label\": \"Expense Amount\", \"fieldtype\": \"Currency\"},\r\n    {\"fieldname\": \"Full Name\", \"label\": \"Full Name\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Date of Parts Recieved\", \"label\": \"Date of Parts Recieved\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Date of Receiving Back from Workshop\", \"label\": \"Date of Receiving Back from Workshop\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Warranty\", \"label\": \"Warranty\", \"fieldtype\": \"Data\"},\r\n    {\"fieldname\": \"Expiry Date\", \"label\": \"Expiry Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Last Purchase Date\", \"label\": \"Last Purchase Date\", \"fieldtype\": \"Date\"},\r\n    {\"fieldname\": \"Expected Date of Change\", \"label\": \"Expected Date of Change\", \"fieldtype\": \"Date\"}\r\n]\r\n\r\n# Return the data\r\ndata = columns, results\r\n",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ],
+ "timeout": 0
+}

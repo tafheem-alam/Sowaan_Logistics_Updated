@@ -1,0 +1,155 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"HL9tEbvcOn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Logistics</span>\",\"col\":12}},{\"id\":\"x4Fz-wIODQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\ud83d\udefb Vehicle\",\"col\":4}},{\"id\":\"j35raq8-nL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Drivers\",\"col\":4}},{\"id\":\"pYbT7b022v\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"dfoNoLqjSn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Note\",\"col\":3}},{\"id\":\"YhechLaZ1C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gate Pass\",\"col\":3}},{\"id\":\"xJTk7WjcU2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistics Buses\",\"col\":3}},{\"id\":\"E588OWmSee\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Expenses\",\"col\":4}},{\"id\":\"erMEnvppqT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistic Car\",\"col\":3}},{\"id\":\"m6Dbdgu6c9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Trip\",\"col\":4}},{\"id\":\"WycjvqFm2B\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"29JQM9AbRH\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\">Reports</span>\",\"col\":12}},{\"id\":\"yNAH-93dWJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Log Report\",\"col\":4}},{\"id\":\"Gg33PqGeyr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Expenses For Delivery Trip\",\"col\":5}},{\"id\":\"iz3ZvwbYar\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Expense Report For Buses\",\"col\":4}},{\"id\":\"B89dM1zjm_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Expense Report For Cars\",\"col\":5}},{\"id\":\"CzAaioIfBh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"eUFuTN1_2L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistics Buses Fuel Report\",\"col\":4}},{\"id\":\"nauYnSuJkK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Logistics Car Fuel Report\",\"col\":4}},{\"id\":\"CzTIu9MKEr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Trip Fuel Report\",\"col\":3}}]",
+ "creation": "2025-11-27 21:13:26.664676",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "image-view",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Sowaan Logistics",
+ "links": [],
+ "modified": "2025-12-02 18:37:34.890938",
+ "modified_by": "Administrator",
+ "module": "Sowaan Logistics",
+ "name": "Sowaan Logistics",
+ "number_cards": [
+  {
+   "label": "Drivers",
+   "number_card_name": "Drivers"
+  },
+  {
+   "label": "\ud83d\udefb Vehicle",
+   "number_card_name": "Vehicle"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Logistic User"
+  },
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Stock Manager"
+  }
+ ],
+ "sequence_id": 36.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle Expense Report For Cars",
+   "link_to": "Vehicle Expense Report for Cars",
+   "report_ref_doctype": "Logistic Car",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Logistics Buses Fuel Report",
+   "link_to": "Logistics Buses Report",
+   "report_ref_doctype": "Logistics Buses",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Delivery Trip",
+   "link_to": "Delivery Trip",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Logistics Buses",
+   "link_to": "Logistics Buses",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gate Pass",
+   "link_to": "Gate Pass",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Logistic Car",
+   "link_to": "Logistic Car",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle Expense Report For Buses",
+   "link_to": "Vehicle Expense Report for Buses",
+   "report_ref_doctype": "Logistics Buses",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle Log Report",
+   "link_to": "Vehicle Log Report",
+   "report_ref_doctype": "Vehicle Log",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle Expenses For Delivery Trip",
+   "link_to": "Vehicle Expenses for Delivery Trip",
+   "report_ref_doctype": "Delivery Trip",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle Expenses",
+   "link_to": "Vehicle Log",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Logistics Car Fuel Report",
+   "link_to": "Logistics Car Report",
+   "report_ref_doctype": "Logistic Car",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Delivery Trip Fuel Report",
+   "link_to": "Delivery Trip",
+   "report_ref_doctype": "Delivery Trip",
+   "type": "Report"
+  }
+ ],
+ "title": "Sowaan Logistics"
+}
