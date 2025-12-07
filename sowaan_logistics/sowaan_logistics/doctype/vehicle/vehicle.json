@@ -10,16 +10,28 @@
  "field_order": [
   "license_plate",
   "make",
+  "custom_vehicle_description",
+  "custom_traffic_certificate",
   "column_break_3",
   "model",
+  "custom_registration_expiry_date",
+  "custom_vehicle_group",
+  "custom_pictures",
+  "vehicle_value",
+  "custom_company",
   "vehicle_details",
   "last_odometer",
   "acquisition_date",
+  "custom_emirates_registered",
   "location",
+  "column_break_qrgf",
+  "custom_traffic_certificate_number",
+  "employee",
+  "custom_driver_full_name",
   "column_break_8",
   "chassis_no",
-  "vehicle_value",
-  "employee",
+  "custom_engine_no",
+  "custom_unit",
   "insurance_details",
   "insurance_company",
   "policy_no",
@@ -28,13 +40,17 @@
   "end_date",
   "additional_details",
   "fuel_type",
+  "custom_fuel_subtype",
   "uom",
   "carbon_check_date",
+  "custom_storage_capacity",
+  "custom_per_km_fuel_consumption",
   "column_break_21",
   "color",
   "wheels",
   "doors",
-  "amended_from"
+  "amended_from",
+  "custom_fuel_rate"
  ],
  "fields": [
   {
@@ -80,12 +96,12 @@
   {
    "fieldname": "acquisition_date",
    "fieldtype": "Date",
-   "label": "Acquisition Date"
+   "label": "Purchase Date"
   },
   {
    "fieldname": "location",
    "fieldtype": "Data",
-   "label": "Location"
+   "label": "Current Location"
   },
   {
    "fieldname": "column_break_8",
@@ -99,7 +115,6 @@
   {
    "fieldname": "vehicle_value",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Vehicle Value",
    "print_hide_if_no_value": 1
   },
@@ -193,14 +208,112 @@
    "options": "Vehicle",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "custom_registration_expiry_date",
+   "fieldtype": "Date",
+   "label": "Registration Expiry Date"
+  },
+  {
+   "fieldname": "custom_vehicle_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle group",
+   "options": "Vehicle Group"
+  },
+  {
+   "fieldname": "custom_pictures",
+   "fieldtype": "Attach Image",
+   "label": "Pictures"
+  },
+  {
+   "fieldname": "custom_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_vehicle_description",
+   "fieldtype": "Small Text",
+   "label": "Vehicle Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_traffic_certificate",
+   "fieldtype": "Data",
+   "label": "Traffic Certificate"
+  },
+  {
+   "fieldname": "custom_storage_capacity",
+   "fieldtype": "Data",
+   "label": "Storage Tank Capacity"
+  },
+  {
+   "fieldname": "custom_per_km_fuel_consumption",
+   "fieldtype": "Float",
+   "label": "Average Fuel Consumption Per KM",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_fuel_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fuel Rate per Litre",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qrgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_traffic_certificate_number",
+   "fieldtype": "Data",
+   "label": "Traffic Certificate Number"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "custom_driver_full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver Full Name"
+  },
+  {
+   "fieldname": "custom_emirates_registered",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Emirates Registered",
+   "options": "Emirates"
+  },
+  {
+   "fieldname": "custom_engine_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Engine No",
+   "print_hide_if_no_value": 1
+  },
+  {
+   "fieldname": "custom_unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "custom_fuel_subtype",
+   "fieldtype": "Select",
+   "label": "Fuel Subtype",
+   "options": "\n87\n89\n90\n91\n93\nOthers",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-12-05 15:16:30.829417",
+ "modified": "2025-12-07 12:09:11.082447",
  "modified_by": "Administrator",
  "module": "Sowaan Logistics",
  "name": "Vehicle",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

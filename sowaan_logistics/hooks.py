@@ -66,6 +66,12 @@ fixtures = [
         "filters": [
             ["module", "=", "Sowaan Logistics"]
         ]
+    },
+    {
+        "dt": "Workspace Link",
+        "filters": [
+            ["module", "=", "Sowaan Logistics"]
+        ]
     }
     
 

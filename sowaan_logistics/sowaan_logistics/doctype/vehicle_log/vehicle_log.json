@@ -9,11 +9,18 @@
  "field_order": [
   "vehicle_section",
   "naming_series",
+  "custom_company",
+  "custom_posting_date",
   "license_plate",
   "employee",
+  "custom_vehicle_driver",
+  "custom_driver_name",
   "column_break_7",
   "model",
   "make",
+  "custom_workshop",
+  "custom_date_of_parts_received",
+  "custom_date_of_receiving_back_from_workshop",
   "odometer_reading",
   "date",
   "odometer",
@@ -61,7 +68,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Employee",
+   "label": "Driver",
    "options": "Employee",
    "reqd": 1
   },
@@ -160,15 +167,64 @@
    "options": "Vehicle Log",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "custom_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_workshop",
+   "fieldtype": "Select",
+   "label": "Workshop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_date_of_parts_received",
+   "fieldtype": "Date",
+   "label": "Date of sending for Repairs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_date_of_receiving_back_from_workshop",
+   "fieldtype": "Date",
+   "label": "Date of Receiving back from Workshop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_vehicle_driver",
+   "fieldtype": "Link",
+   "label": "Vehicle Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "custom_vehicle_driver.full_name",
+   "fetch_if_empty": 1,
+   "fieldname": "custom_driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "custom_posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-04 11:13:22.878977",
+ "modified": "2025-12-06 22:45:08.916123",
  "modified_by": "Administrator",
  "module": "Sowaan Logistics",
  "name": "Vehicle Log",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
