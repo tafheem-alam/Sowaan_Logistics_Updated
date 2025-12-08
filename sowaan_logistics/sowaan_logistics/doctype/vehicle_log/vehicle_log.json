@@ -180,6 +180,7 @@
    "fieldname": "custom_workshop",
    "fieldtype": "Select",
    "label": "Workshop",
+   "options": "\nWorkshop\nOutsourced",
    "reqd": 1
   },
   {
@@ -220,7 +221,7 @@
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-06 22:45:08.916123",
+ "modified": "2025-12-08 11:34:03.755093",
  "modified_by": "Administrator",
  "module": "Sowaan Logistics",
  "name": "Vehicle Log",
@@ -243,6 +244,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
