@@ -10,9 +10,9 @@
  "idx": 0,
  "is_standard": "Yes",
  "json": "{\"filters\":[],\"fields\":[[\"name\",\"Vehicle\"],[\"make\",\"Vehicle\"],[\"model\",\"Vehicle\"],[\"custom_vehicle_group\",\"Vehicle\"],[\"custom_emirates_registered\",\"Vehicle\"],[\"employee\",\"Vehicle\"],[\"custom_driver_full_name\",\"Vehicle\"],[\"fuel_type\",\"Vehicle\"],[\"custom_registration_expiry_date\",\"Vehicle\"]],\"order_by\":\"`tabVehicle`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"make\":120,\"model\":120,\"custom_vehicle_group\":120,\"custom_emirates_registered\":120,\"employee\":120,\"custom_driver_full_name\":120,\"fuel_type\":120,\"custom_registration_expiry_date\":120},\"group_by\":null}",
- "letter_head": "Sasco",
+ "letter_head": "",
  "letterhead": null,
- "modified": "2025-12-02 19:54:52.615885",
+ "modified": "2025-12-09 13:27:59.186192",
  "modified_by": "Administrator",
  "module": "Sowaan Logistics",
  "name": "Vehicle Report",
@@ -30,9 +30,6 @@
   },
   {
    "role": "Fleet Manager"
-  },
-  {
-   "role": "Logistic User"
   }
  ],
  "timeout": 0

@@ -6,14 +6,12 @@
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [
-  
- ],
+ "filters": [],
  "idx": 17,
  "is_standard": "Yes",
- "letter_head": "Sasco",
+ "letter_head": "",
  "letterhead": null,
- "modified": "2025-12-02 19:56:34.869725",
+ "modified": "2025-12-09 13:04:56.083473",
  "modified_by": "Administrator",
  "module": "Sowaan Logistics",
  "name": "Logistics Buses Report",
@@ -32,9 +30,6 @@
   },
   {
    "role": "Delivery Manager"
-  },
-  {
-   "role": "Logistic User"
   }
  ],
  "timeout": 0
